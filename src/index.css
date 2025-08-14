@@ -17,8 +17,9 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 210 85% 25%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 210 85% 35%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -26,8 +27,9 @@ All colors MUST be HSL.
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
+    --accent: 48 100% 50%;
     --accent-foreground: 222.2 47.4% 11.2%;
+    --accent-glow: 48 100% 60%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -35,6 +37,24 @@ All colors MUST be HSL.
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
+
+    /* Transportation theme colors */
+    --transport-blue: 210 85% 25%;
+    --transport-gold: 48 100% 50%;
+    --transport-light: 210 40% 98%;
+    --transport-gray: 215.4 16.3% 46.9%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--transport-blue)), hsl(var(--primary-glow)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--transport-gold)), hsl(var(--accent-glow)));
+    --gradient-card: linear-gradient(180deg, hsl(var(--background)), hsl(var(--transport-light)));
+
+    /* Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--transport-blue) / 0.3);
+    --shadow-glow: 0 0 40px hsl(var(--accent-glow) / 0.4);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --radius: 0.5rem;
 
