@@ -17,9 +17,11 @@
     <meta name="twitter:site" content="@taxi_mienbac" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-    <!-- SPA GitHub Pages redirect script -->
+    <!-- GitHub Pages SPA redirect script -->
     <script type="text/javascript">
-      var pathSegmentsToKeep = 1; // Số segments để giữ lại (/NhaXeCongTrong/)
+      // Single Page Apps for GitHub Pages
+      // Đây là script để redirect từ 404 về trang chính với đúng route
+      var pathSegmentsToKeep = 1;
       var l = window.location;
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
@@ -32,6 +34,7 @@
   </head>
 
   <body>
-    <!-- Không cần div#root và script ở đây vì đây chỉ là redirect -->
+    <div id="root"></div>
+    <script type="module" src="/NhaXeCongTrong/src/main.tsx"></script>
   </body>
 </html>
