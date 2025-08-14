@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, MapPin, Star, Shield, Clock, Car, Users, Award, CheckCircle } from "lucide-react";
+import { Phone, MapPin, Star, Shield, Clock, Car, Users, Award, CheckCircle, MessageCircle } from "lucide-react";
 import heroImage from "@/assets/hero-vehicles.jpg";
 
 const Hero = () => {
@@ -73,42 +73,92 @@ const Hero = () => {
 
           {/* Contact Card */}
           <div className="animate-slide-up">
-            <div className="bg-background/95 backdrop-blur-md rounded-2xl p-8 shadow-elegant">
-              <h3 className="text-2xl font-bold text-primary mb-6 text-center">
-                Đặt xe ngay
-              </h3>
+            <div className="bg-background/95 backdrop-blur-md rounded-2xl p-8 shadow-elegant border border-accent/20">
+              {/* Header với icon và màu sắc */}
+              <div className="text-center mb-6">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-accent/20 to-accent/10 rounded-full mb-3">
+                  <Car className="h-6 w-6 text-accent" />
+                </div>
+                <h3 className="text-2xl font-bold text-primary mb-2">
+                  Đặt xe ngay
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  Liên hệ ngay để được phục vụ tốt nhất
+                </p>
+              </div>
               
+              {/* Phone section với gradient */}
               <div className="space-y-4 mb-6">
-                <div className="flex items-center space-x-3 p-4 bg-gradient-card rounded-lg">
-                  <Phone className="h-6 w-6 text-primary" />
-                  <div>
-                    <div className="font-semibold text-primary">Hotline/Zalo</div>
-                    <div className="text-2xl font-bold text-accent">0387922188</div>
+                <div className="relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-accent/10 to-primary/5 rounded-lg"></div>
+                  <div className="relative flex items-center space-x-3 p-4 bg-gradient-card rounded-lg border border-accent/30">
+                    <div className="flex-shrink-0">
+                      <div className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center">
+                        <Phone className="h-5 w-5 text-accent" />
+                      </div>
+                    </div>
+                    <div>
+                      <div className="font-semibold text-primary">Hotline/Zalo</div>
+                      <div className="text-2xl font-bold text-accent">0387922188</div>
+                    </div>
                   </div>
                 </div>
               </div>
 
+              {/* Services với màu sắc riêng */}
               <div className="grid grid-cols-2 gap-3 text-sm">
-                <div className="text-center p-3 bg-muted rounded-lg flex flex-col items-center space-y-2">
-                  <Users className="h-5 w-5 text-primary" />
-                  <div className="font-semibold text-primary">Taxi gia đình</div>
-                  <div className="text-muted-foreground">Xe 5c-7c</div>
+                <div className="p-3 bg-gradient-to-br from-green-50 to-green-50/50 rounded-lg border border-green-200/50">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Users className="h-4 w-4 text-green-600" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-green-800">Taxi gia đình</div>
+                      <div className="text-green-600">Xe 5c-7c</div>
+                    </div>
+                  </div>
                 </div>
-                <div className="text-center p-3 bg-muted rounded-lg flex flex-col items-center space-y-2">
-                  <Award className="h-5 w-5 text-primary" />
-                  <div className="font-semibold text-primary">Xe hợp đồng</div>
-                  <div className="text-muted-foreground">Theo tháng</div>
+                <div className="p-3 bg-gradient-to-br from-purple-50 to-purple-50/50 rounded-lg border border-purple-200/50">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Award className="h-4 w-4 text-purple-600" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-purple-800">Xe hợp đồng</div>
+                      <div className="text-purple-600">Theo tháng</div>
+                    </div>
+                  </div>
                 </div>
-                <div className="text-center p-3 bg-muted rounded-lg flex flex-col items-center space-y-2">
-                  <MapPin className="h-5 w-5 text-primary" />
-                  <div className="font-semibold text-primary">Tour du lịch</div>
-                  <div className="text-muted-foreground">Tham quan</div>
+                <div className="p-3 bg-gradient-to-br from-orange-50 to-orange-50/50 rounded-lg border border-orange-200/50">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <MapPin className="h-4 w-4 text-orange-600" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-orange-800">Tour du lịch</div>
+                      <div className="text-orange-600">Tham quan</div>
+                    </div>
+                  </div>
                 </div>
-                <div className="text-center p-3 bg-muted rounded-lg flex flex-col items-center space-y-2">
-                  <Car className="h-5 w-5 text-primary" />
-                  <div className="font-semibold text-primary">Sân bay</div>
-                  <div className="text-muted-foreground">Đưa đón</div>
+                <div className="p-3 bg-gradient-to-br from-blue-50 to-blue-50/50 rounded-lg border border-blue-200/50">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Car className="h-4 w-4 text-blue-600" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-blue-800">Sân bay</div>
+                      <div className="text-blue-600">Đưa đón</div>
+                    </div>
+                  </div>
                 </div>
+              </div>
+
+              {/* Call to action button */}
+              <div className="mt-6 pt-4 border-t border-muted">
+                <Button className="w-full bg-gradient-to-r from-accent to-accent/80 hover:from-accent/90 hover:to-accent/70 text-white shadow-lg hover:shadow-xl transition-all duration-300 py-3 text-lg font-semibold">
+                  <Phone className="h-5 w-5 mr-2" />
+                  Gọi ngay để đặt xe
+                </Button>
               </div>
             </div>
           </div>

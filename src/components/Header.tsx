@@ -24,7 +24,7 @@ const Header = () => {
               <MapPin className="h-6 w-6 text-primary-foreground" />
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-lg text-primary">Taxi Miền Bắc</span>
+              <span className="font-bold text-lg text-primary">Nhà Xe Công Trọng</span>
               <span className="text-xs text-muted-foreground">Uy tín - An toàn</span>
             </div>
           </div>

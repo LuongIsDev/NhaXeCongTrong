@@ -12,7 +12,7 @@ const Footer = () => {
                 <MapPin className="h-6 w-6 text-accent-foreground" />
               </div>
               <div>
-                <h3 className="font-bold text-xl">Taxi Miền Bắc</h3>
+                <h3 className="font-bold text-xl">Nhà Xe Công Trọng</h3>
                 <p className="text-sm opacity-80">Uy tín - An toàn - Chất lượng</p>
               </div>
             </div>

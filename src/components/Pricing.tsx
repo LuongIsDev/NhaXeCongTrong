@@ -127,27 +127,9 @@ const Pricing = () => {
           ))}
         </div>
 
-        {/* Contact for booking */}
-        <div className="text-center animate-fade-in">
-          <Card className="inline-block bg-gradient-hero text-primary-foreground">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-4">Đặt xe ngay</h3>
-              <p className="mb-6 opacity-90">
-                Liên hệ để được tư vấn và đặt xe với giá tốt nhất
-              </p>
-              <Button size="lg" className="bg-accent hover:bg-accent-glow text-accent-foreground">
-                <Phone className="h-5 w-5 mr-2" />
-                Gọi 0387922188
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
+        
+       
 
-        {/* Note */}
-        <div className="mt-8 text-center text-sm text-muted-foreground">
-          <p>* Giá có thể thay đổi tùy theo thời gian và điều kiện đường xá</p>
-          <p>* Liên hệ để được báo giá chi tiết và ưu đãi đặc biệt</p>
-        </div>
       </div>
     </section>
   );
