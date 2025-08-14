@@ -1,10 +1,19 @@
 import { Button } from "@/components/ui/button";
-import { Phone, MapPin, Star, Shield, Clock } from "lucide-react";
+import { Phone, MapPin, Star, Shield, Clock, Car, Users, Award, CheckCircle } from "lucide-react";
 import heroImage from "@/assets/hero-vehicles.jpg";
 
 const Hero = () => {
   return (
-    <section id="home" className="relative pt-16 min-h-screen bg-gradient-hero flex items-center">
+    <section id="home" className="relative pt-16 min-h-screen bg-gradient-hero flex items-center overflow-hidden">
+      {/* Floating Background Icons */}
+      <div className="absolute inset-0 z-1 pointer-events-none">
+        <Car className="absolute top-20 left-10 h-12 w-12 text-accent/10 animate-pulse" />
+        <Users className="absolute top-32 right-20 h-8 w-8 text-accent/10 animate-bounce" />
+        <Award className="absolute bottom-40 left-20 h-10 w-10 text-accent/10 animate-pulse" />
+        <CheckCircle className="absolute bottom-60 right-32 h-6 w-6 text-accent/10 animate-bounce" />
+        <MapPin className="absolute top-48 left-1/4 h-8 w-8 text-accent/10 animate-pulse" />
+      </div>
+
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -51,11 +60,11 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button size="lg" className="bg-accent hover:bg-accent-glow text-accent-foreground shadow-glow">
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-glow">
                 <Phone className="h-5 w-5 mr-2" />
                 Gọi ngay: 0387922188
               </Button>
-              <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              <Button size="lg" variant="outline" className="border-primary-foreground/80 text-primary-foreground bg-transparent hover:bg-primary-foreground hover:text-primary backdrop-blur-sm">
                 <MapPin className="h-5 w-5 mr-2" />
                 Xem bảng giá
               </Button>
@@ -80,19 +89,23 @@ const Hero = () => {
               </div>
 
               <div className="grid grid-cols-2 gap-3 text-sm">
-                <div className="text-center p-3 bg-muted rounded-lg">
+                <div className="text-center p-3 bg-muted rounded-lg flex flex-col items-center space-y-2">
+                  <Users className="h-5 w-5 text-primary" />
                   <div className="font-semibold text-primary">Taxi gia đình</div>
                   <div className="text-muted-foreground">Xe 5c-7c</div>
                 </div>
-                <div className="text-center p-3 bg-muted rounded-lg">
+                <div className="text-center p-3 bg-muted rounded-lg flex flex-col items-center space-y-2">
+                  <Award className="h-5 w-5 text-primary" />
                   <div className="font-semibold text-primary">Xe hợp đồng</div>
                   <div className="text-muted-foreground">Theo tháng</div>
                 </div>
-                <div className="text-center p-3 bg-muted rounded-lg">
+                <div className="text-center p-3 bg-muted rounded-lg flex flex-col items-center space-y-2">
+                  <MapPin className="h-5 w-5 text-primary" />
                   <div className="font-semibold text-primary">Tour du lịch</div>
                   <div className="text-muted-foreground">Tham quan</div>
                 </div>
-                <div className="text-center p-3 bg-muted rounded-lg">
+                <div className="text-center p-3 bg-muted rounded-lg flex flex-col items-center space-y-2">
+                  <Car className="h-5 w-5 text-primary" />
                   <div className="font-semibold text-primary">Sân bay</div>
                   <div className="text-muted-foreground">Đưa đón</div>
                 </div>
